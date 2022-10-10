@@ -1,0 +1,21 @@
+{
+    "eslint.run": "onType",
+    "eslint.options": {
+      "extensions": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    // 配置了 editor.codeActionsOnSave 就相当于配置了 formatOnSave, 不需要再开启 formatOnSave
+    // 禁止 开启 format on save
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+      "javascriptreact",
+      "javascript",
+      "html"
+    ],
+    "editor.formatOnSave": false
+  }
+  
