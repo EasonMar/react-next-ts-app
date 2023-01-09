@@ -1,16 +1,22 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import Layout from '../components/layout'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
 
 const Documentation: NextPage = () => {
     return (
-        <Layout>
-            <h1>Documentation</h1>
-            <Link href="/">
-                <a className={styles.title}>Go back</a>
-            </Link>
-        </Layout>
+    <Layout>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
+        <section className={utilStyles.headingMd}>
+          <p>Senior FrontEnd Develop Engineer</p>
+          <p>
+            (This is a sample website - you’ll be building a site like this on{' '}
+            <a href="https://www.nextjs.cn/learn">our Next.js tutorial</a>.)
+          </p>
+        </section>
+    </Layout>
     )
 }
 

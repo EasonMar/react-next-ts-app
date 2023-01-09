@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import Layout from '../components/layout'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 
 import useSWR from 'swr' // SWR is a React Hooks library for data fetching
 import fetch from 'unfetch' // Tiny 500b fetch "barely-polyfill"
@@ -27,10 +26,10 @@ const Profile: NextPage = () => {
     // === 重构处理逻辑 === 
     const result = error ? `failed to load` : data ? `hello ${data.name}!` : `loading...`;
     return <Layout>
+        <Head>
+          <title>profile</title>
+        </Head>
         <h1>{result}</h1>
-        <Link href="/">
-            <a className={styles.title}>Go back</a>
-        </Link>
     </Layout>
 }
 
