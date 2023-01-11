@@ -34,12 +34,22 @@ const Home: NextPage = () => {
 
           <Link href="/profile">
             <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               className={styles.card}
             >
               <h2>Deploy &rarr;</h2>
               <p>
                 Instantly deploy your Next.js site to a public URL with Vercel.
+              </p>
+            </a>
+          </Link>
+
+          <Link href="/posts">
+            <a
+              className={styles.card}
+            >
+              <h2>Posts &rarr;</h2>
+              <p>
+                Static Generation with Data using getStaticProps, see what happen?
               </p>
             </a>
           </Link>
@@ -56,6 +66,16 @@ const Home: NextPage = () => {
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
+
+            <a
+              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              className={styles.card}
+            >
+              <h2>Vercel &rarr;</h2>
+              <p>
+              https://vercel.com/new?utm_source=create-next-app
+              </p>
+            </a>
         </div>
       </main>
 
